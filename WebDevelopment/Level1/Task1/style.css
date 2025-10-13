@@ -1,0 +1,151 @@
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header nav {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #555;
+  padding: 5px 10px;
+}
+
+header .header-content {
+  margin-top: 100px;
+}
+
+header .header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+header .header-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hire-me-btn {
+  background: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hire-me-btn:hover {
+  background-color: #0056b3;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #f4f4f4;
+}
+
+.about-left {
+  flex: 1;
+  text-align: center;
+}
+
+.about-left img {
+  max-width: 250px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.about-right {
+  flex: 2;
+  margin-left: 40px;
+}
+
+.about-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-right p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-btn:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+.aboutSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-betweeen;
+    justify-items: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+.links{
+    display: flex;
+}
