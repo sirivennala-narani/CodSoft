@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Clock App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🕒 Smart Clock</h1>
+
+  <div class="tabs">
+    <button class="tab-button active" data-tab="alarm">Alarm</button>
+    <button class="tab-button" data-tab="timer">Timer</button>
+    <button class="tab-button" data-tab="stopwatch">Stopwatch</button>
+  </div>
+
+  <!-- ALARM TAB -->
+  <div class="tab-content active" id="alarm">
+    <div id="time" class="time">__:__:__ __</div>
+    <div id="date" class="date">__/__/____</div>
+
+    <h2>Set Alarm</h2>
+    <input type="time" id="alarmTime" />
+    <select id="amPm">
+      <option value="AM">AM</option>
+      <option value="PM">PM</option>
+    </select>
+
+    <select id="tone">
+      <option value="tone1">Classic Tone</option>
+      <option value="tone2">Soft Beep</option>
+      <option value="tone3">Digital Ring</option>
+    </select>
+
+    <button id="setAlarmBtn">Set Alarm</button>
+    <div id="alarmsList" class="alarms-list"></div>
+  </div>
+
+  <!-- TIMER TAB -->
+  <div class="tab-content" id="timer">
+    <h2>Set Timer</h2>
+    <div class="timer-inputs">
+      <input type="number" id="hours" placeholder="HH" min="0" max="23">
+      <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+      <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    </div>
+    <div id="timerDisplay" class="time">00:00:00</div>
+    <button id="startTimer">Start</button>
+    <button id="pauseTimer">Pause</button>
+    <button id="resetTimer">Reset</button>
+  </div>
+
+  <!-- STOPWATCH TAB -->
+  <div class="tab-content" id="stopwatch">
+    <h2>Stopwatch</h2>
+    <div id="stopwatchDisplay" class="time">00:00:00</div>
+    <button id="startStopwatch">Start</button>
+    <button id="pauseStopwatch">Pause</button>
+    <button id="resetStopwatch">Reset</button>
+  </div>
+
+  <audio id="alarmSound"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

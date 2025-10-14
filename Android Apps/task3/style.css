@@ -1,0 +1,94 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: #00c6ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+}
+
+.tab-button.active {
+  background: #0072ff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.time {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.date {
+  opacity: 0.8;
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+button {
+  background: #00c6ff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0072ff;
+}
+
+.alarm-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.timer-inputs input {
+  width: 60px;
+}
+
+.ringing {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { background-color: #ff4b5c; }
+  to { background-color: #ff8b94; }
+}
