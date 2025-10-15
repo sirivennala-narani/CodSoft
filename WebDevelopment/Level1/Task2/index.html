@@ -3,71 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online Portfolio</title>
+  <title>Siri Vennala | Web Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header Section -->
-  <div class="header">
+  <!-- Header -->
+  <header class="header">
     <div class="container header-container">
-      <h1 class="logo">Online Portfolio</h1>
+      <h1 class="logo">SiriVennala</h1>
       <nav class="navbar">
         <ul class="nav-list">
-          <li><a href="#" class="nav-link">Home</a></li>
-          <li><a href="#" class="nav-link">About Me</a></li>
-          <li><a href="#" class="nav-link">Services</a></li>
-          <li><a href="#" class="nav-link">Skills</a></li>
-          <li><a href="#" class="nav-link">Experience</a></li>
-          <li><a href="#" class="nav-link">Works</a></li>
-          <li><a href="#" class="nav-link">Blog</a></li>
-          <li><a href="#" class="nav-link">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </div>
+  </header>
 
   <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-content">
+  <section class="hero" id="home">
+    <div class="container hero-container">
       <div class="hero-text">
-        <h2 class="hero-title">Katherine Pierce</h2>
+        <h2 class="hero-title">Hi, I’m <span class="highlight">Siri Vennala</span></h2>
         <p class="hero-description">
-          Hi, I am a Professional Developer and ICT Degree holder. I have five years of
-          experience in the IT Sector as an ICT Lecturer. I specialize in designing, developing, and
-          deploying efficient web and mobile applications. My work focuses on crafting clean,
-          user-friendly interfaces and delivering reliable backend solutions.
+          A passionate web developer focused on crafting clean, user-friendly websites and interactive interfaces.
+          I love transforming ideas into functional, creative, and visually appealing digital experiences.
         </p>
-        <a href="#" class="btn btn-primary">Hire Me</a>
+        <a href="#projects" class="btn btn-primary">View My Work</a>
       </div>
-      <div class="hero-image">
-        <img src="young-smiling-businesswoman.jpg" alt="Profile photo" class="profile-img">
+      <div>
+        <img src="young-smiling-businesswoman.jpg" alt="Siri Vennala" class="hero-image">
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="features" id="skills">
+    <div class="container features-container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h3 class="feature-title">Frontend Development</h3>
+          <p class="feature-description">
+            Proficient in HTML, CSS, and JavaScript for creating responsive and accessible user interfaces.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h3 class="feature-title">Frameworks & Tools</h3>
+          <p class="feature-description">
+            Experienced with React.js, Tailwind CSS, and version control using Git and GitHub.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h3 class="feature-title">Design & Creativity</h3>
+          <p class="feature-description">
+            Skilled at using Figma and Canva to design engaging layouts and color palettes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container projects-container">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="FormAssembly-landing-page-example.jpg" alt="Landing Page Project">
+          <div class="project-content">
+            <h3 class="project-title">Landing Page Design</h3>
+            <p class="project-description">
+              A creative and responsive landing page built using HTML and CSS, focusing on clean layout, alignment, and color palette.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="calculator.jpg" alt="Calculator App">
+          <div class="project-content">
+            <h3 class="project-title">Basic Calculator</h3>
+            <p class="project-description">
+              A functional calculator built with HTML, CSS, and JavaScript using event listeners and logical operators.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="portfolio.jpg" alt="Portfolio Website">
+          <div class="project-content">
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-description">
+              My personal portfolio designed to showcase projects, skills, and contact information in a professional way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- About Section -->
-  <div class="about">
+  <section class="about" id="about">
     <div class="container about-container">
-      <img src="confident-businesswoman.jpg" alt="Profile photo" class="about-img">
+      <img src="1683704157c2lIUSQChl.png" alt="Web Design" class="about-img">
       <div class="about-text">
         <h2 class="about-title">About Me</h2>
-        <p class="about-subtitle">
-          I am a Developer blending expertise with industry know-how to guide your next
-          property development.
-        </p>
         <p class="about-description">
-          Software Developers use software development languages and tools to write, edit,
-          maintain, and test computer software. They follow the SDLC to plan, design, build,
-          test, and deploy applications, ranging from websites and mobile apps to games.
+          I’m an aspiring front-end developer who enjoys exploring the world of web technologies. My goal is to
+          build beautiful, responsive, and efficient websites that enhance user experience. I constantly learn new
+          tools and techniques to improve my work and deliver better solutions.
         </p>
-        <a href="#" class="btn btn-primary">Download Resume</a>
+        <a href="#contact" class="btn btn-secondary">Let’s Connect</a>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container contact-container">
+      <h2 class="section-title">Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" class="form-input" placeholder="Your Name" required>
+        <input type="email" class="form-input" placeholder="Your Email" required>
+        <textarea class="form-textarea" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <div class="footer">
-    <p class="footer-text">© 2025 Katherine Pierce. All rights reserved.</p>
-  </div>
+  <footer class="footer">
+    <p class="footer-text">© 2025 Siri Vennala. Designed with ❤️ using HTML & CSS.</p>
+  </footer>
 </body>
 </html>
+
+
+
