@@ -1,0 +1,142 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class MarksCalculatorAWT extends Frame implements ActionListener {
+    Label heading, nameLabel1, nameLabel2, nameLabel3, nameLabel4, nameLabel5;
+    Label markLabel1, markLabel2, markLabel3, markLabel4, markLabel5;
+    TextField s1, s2, s3, s4, s5;   // Subject name fields
+    TextField m1, m2, m3, m4, m5;   // Marks fields
+    Button calcBtn;
+    Label totalLabel, avgLabel, gradeLabel;
+
+    MarksCalculatorAWT() {
+        setTitle("Marks and Grade Calculator (with Subject Names)");
+        setLayout(null);
+        setSize(500, 600);
+        setBackground(new Color(230, 245, 250));
+
+        heading = new Label("Enter Subject Names and Marks (out of 100)");
+        heading.setBounds(90, 50, 320, 30);
+        heading.setFont(new Font("Arial", Font.BOLD, 14));
+        add(heading);
+
+        // Subject Name Labels
+        nameLabel1 = new Label("Subject 1:");
+        nameLabel2 = new Label("Subject 2:");
+        nameLabel3 = new Label("Subject 3:");
+        nameLabel4 = new Label("Subject 4:");
+        nameLabel5 = new Label("Subject 5:");
+
+        nameLabel1.setBounds(60, 100, 70, 25);
+        nameLabel2.setBounds(60, 140, 70, 25);
+        nameLabel3.setBounds(60, 180, 70, 25);
+        nameLabel4.setBounds(60, 220, 70, 25);
+        nameLabel5.setBounds(60, 260, 70, 25);
+
+        add(nameLabel1); add(nameLabel2); add(nameLabel3); add(nameLabel4); add(nameLabel5);
+
+        // Marks Labels
+        markLabel1 = new Label("Marks:");
+        markLabel2 = new Label("Marks:");
+        markLabel3 = new Label("Marks:");
+        markLabel4 = new Label("Marks:");
+        markLabel5 = new Label("Marks:");
+
+        markLabel1.setBounds(270, 100, 50, 25);
+        markLabel2.setBounds(270, 140, 50, 25);
+        markLabel3.setBounds(270, 180, 50, 25);
+        markLabel4.setBounds(270, 220, 50, 25);
+        markLabel5.setBounds(270, 260, 50, 25);
+
+        add(markLabel1); add(markLabel2); add(markLabel3); add(markLabel4); add(markLabel5);
+
+        // Subject Name Input Fields
+        s1 = new TextField(); s1.setBounds(130, 100, 120, 25);
+        s2 = new TextField(); s2.setBounds(130, 140, 120, 25);
+        s3 = new TextField(); s3.setBounds(130, 180, 120, 25);
+        s4 = new TextField(); s4.setBounds(130, 220, 120, 25);
+        s5 = new TextField(); s5.setBounds(130, 260, 120, 25);
+        add(s1); add(s2); add(s3); add(s4); add(s5);
+
+        // Marks Input Fields
+        m1 = new TextField(); m1.setBounds(330, 100, 80, 25);
+        m2 = new TextField(); m2.setBounds(330, 140, 80, 25);
+        m3 = new TextField(); m3.setBounds(330, 180, 80, 25);
+        m4 = new TextField(); m4.setBounds(330, 220, 80, 25);
+        m5 = new TextField(); m5.setBounds(330, 260, 80, 25);
+        add(m1); add(m2); add(m3); add(m4); add(m5);
+
+        // Calculate Button
+        calcBtn = new Button("Calculate Result");
+        calcBtn.setBounds(170, 310, 150, 40);
+        calcBtn.setBackground(new Color(51, 153, 255));
+        calcBtn.setForeground(Color.white);
+        calcBtn.setFont(new Font("Arial", Font.BOLD, 12));
+        add(calcBtn);
+
+        // Result Labels
+        totalLabel = new Label("Total Marks: ");
+        totalLabel.setBounds(100, 380, 300, 25);
+        add(totalLabel);
+
+        avgLabel = new Label("Average Percentage: ");
+        avgLabel.setBounds(100, 410, 300, 25);
+        add(avgLabel);
+
+        gradeLabel = new Label("Grade: ");
+        gradeLabel.setBounds(100, 440, 300, 25);
+        add(gradeLabel);
+
+        // Event listener
+        calcBtn.addActionListener(this);
+
+        // Close button
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                dispose();
+            }
+        });
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        try {
+            double mark1 = Double.parseDouble(m1.getText());
+            double mark2 = Double.parseDouble(m2.getText());
+            double mark3 = Double.parseDouble(m3.getText());
+            double mark4 = Double.parseDouble(m4.getText());
+            double mark5 = Double.parseDouble(m5.getText());
+
+            double total = mark1 + mark2 + mark3 + mark4 + mark5;
+            double avg = total / 5;
+
+            String grade;
+            if (avg >= 90)
+                grade = "A+";
+            else if (avg >= 80)
+                grade = "A";
+            else if (avg >= 70)
+                grade = "B";
+            else if (avg >= 60)
+                grade = "C";
+            else if (avg >= 50)
+                grade = "D";
+            else
+                grade = "F";
+
+            totalLabel.setText("Total Marks: " + total);
+            avgLabel.setText("Average Percentage: " + String.format("%.2f", avg) + "%");
+            gradeLabel.setText("Grade: " + grade);
+
+        } catch (Exception ex) {
+            totalLabel.setText("Error: Please enter valid numbers for marks!");
+            avgLabel.setText("");
+            gradeLabel.setText("");
+        }
+    }
+
+    public static void main(String[] args) {
+        new MarksCalculatorAWT();
+    }
+}
